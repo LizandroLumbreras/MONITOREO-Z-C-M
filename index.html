@@ -7,32 +7,36 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#00416A">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
       margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #00416A, #E4E5E6);
       font-family: 'Segoe UI', sans-serif;
-      color: white;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      position: relative;
-      overflow: hidden;
+      background: linear-gradient(to right, #00416A, #E4E5E6);
+      color: white;
     }
+
     h1 {
-      margin-bottom: 30px;
+      margin: 30px 0 10px;
       font-size: 28px;
+      text-align: center;
       z-index: 2;
     }
+
     .menu-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
+      padding: 20px;
       z-index: 2;
     }
+
     .menu-button {
       background-color: white;
       color: #00416A;
@@ -46,27 +50,46 @@
       min-width: 220px;
       text-align: center;
     }
+
     .menu-button:hover {
       background-color: #00416A;
       color: white;
       transform: scale(1.05);
     }
+
     .marca-agua {
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       opacity: 0.08;
-      z-index: 1;
+      z-index: 0;
       max-width: 80%;
       height: auto;
       pointer-events: none;
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      font-size: 13px;
+      color: #333;
+      background-color: #f2f2f2;
+      padding: 15px 10px;
+      border-top: 1px solid #ccc;
+      margin-top: auto;
+    }
+
+    footer span {
+      color: #00416A;
     }
   </style>
 </head>
 <body>
   <img src="logo_proveedora.png" alt="Logo La Proveedora" class="marca-agua">
+
   <h1>Menú Principal - Monitoreo</h1>
+
   <div class="menu-container">
     <button class="menu-button" onclick="window.location.href='https://lizandrolumbreras.github.io/Monitoreo-Zapata/'">
       Salidas Zapata
@@ -80,15 +103,15 @@
     <button class="menu-button" onclick="window.location.href='https://lizandrolumbreras.github.io/MONITOREO-MERMA/'">
       Monitoreo de Mermas
     </button>
-     <button class="menu-button" onclick="window.location.href='https://licaptio.github.io/MENUADMONPROTEC25/DEUDAV2.0/DONMORRISDEUDA.html'">
+    <button class="menu-button" onclick="window.location.href='https://licaptio.github.io/MENUADMONPROTEC25/DEUDAV2.0/DONMORRISDEUDA.html'">
       Visor Facturas Proveedora
     </button>
   </div>
 
-   <footer>
+  <footer>
     © 2025 <span>Menu Monitoreo Almacen PDD</span> · Desarrollado por Lizandro Sustaita
   </footer>
-  
+
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js')
