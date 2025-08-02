@@ -12,20 +12,30 @@
     }
 
     html, body {
-      height: 100%;
       margin: 0;
+      padding: 0;
+      height: 100%;
       font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #00416A, #E4E5E6);
       display: flex;
       flex-direction: column;
-      background: linear-gradient(to right, #00416A, #E4E5E6);
       color: white;
     }
 
-    h1 {
-      margin: 30px 0 10px;
-      font-size: 28px;
-      text-align: center;
+    .contenido {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
       z-index: 2;
+      padding-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
     }
 
     .menu-container {
@@ -33,7 +43,6 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-      padding: 20px;
       z-index: 2;
     }
 
@@ -77,7 +86,6 @@
       background-color: #f2f2f2;
       padding: 15px 10px;
       border-top: 1px solid #ccc;
-      margin-top: auto;
     }
 
     footer span {
@@ -88,24 +96,25 @@
 <body>
   <img src="logo_proveedora.png" alt="Logo La Proveedora" class="marca-agua">
 
-  <h1>Menú Principal - Monitoreo</h1>
-
-  <div class="menu-container">
-    <button class="menu-button" onclick="window.location.href='https://lizandrolumbreras.github.io/Monitoreo-Zapata/'">
-      Salidas Zapata
-    </button>
-    <button class="menu-button" onclick="window.location.href='https://lizandrolumbreras.github.io/INVENTARIO-ZAPATA/'">
-      Stock Zapata
-    </button>
-    <button class="menu-button" onclick="window.location.href='https://lizandrolumbreras.github.io/SROCK-CIGARRO-ENTRADAS-SALIDAS/'">
-      Stock Cigarro
-    </button>
-    <button class="menu-button" onclick="window.location.href='https://lizandrolumbreras.github.io/MONITOREO-MERMA/'">
-      Monitoreo de Mermas
-    </button>
-    <button class="menu-button" onclick="window.location.href='https://licaptio.github.io/MENUADMONPROTEC25/DEUDAV2.0/DONMORRISDEUDA.html'">
-      Visor Facturas Proveedora
-    </button>
+  <div class="contenido">
+    <h1>Menú Principal - Monitoreo</h1>
+    <div class="menu-container">
+      <button class="menu-button" onclick="window.location.href='https://lizandrolumbreras.github.io/Monitoreo-Zapata/'">
+        Salidas Zapata
+      </button>
+      <button class="menu-button" onclick="window.location.href='https://lizandrolumbreras.github.io/INVENTARIO-ZAPATA/'">
+        Stock Zapata
+      </button>
+      <button class="menu-button" onclick="window.location.href='https://lizandrolumbreras.github.io/SROCK-CIGARRO-ENTRADAS-SALIDAS/'">
+        Stock Cigarro
+      </button>
+      <button class="menu-button" onclick="window.location.href='https://lizandrolumbreras.github.io/MONITOREO-MERMA/'">
+        Monitoreo de Mermas
+      </button>
+      <button class="menu-button" onclick="window.location.href='https://licaptio.github.io/MENUADMONPROTEC25/DEUDAV2.0/DONMORRISDEUDA.html'">
+        Visor Facturas Proveedora
+      </button>
+    </div>
   </div>
 
   <footer>
